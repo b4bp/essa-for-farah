@@ -1,0 +1,1731 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💖 للملكة فرح - من عيسى 💖</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#FFF3FA;
+      --bg2:#F2F7FF;
+
+      --card: rgba(255,255,255,.78);
+      --stroke: rgba(20,10,40,.10);
+      --shadow: 0 18px 60px rgba(30, 20, 60, .12);
+
+      --text:#2A2440;
+      --muted:#6B5F86;
+
+      --pink:#FF5BA6;
+      --lav:#8B7CFF;
+      --mint:#2ED9A3;
+      --yellow:#FFD35A;
+
+      --insta-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      --grad: linear-gradient(135deg, rgba(255,91,166,.28), rgba(139,124,255,.24));
+
+      --r:24px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Tajawal', system-ui, -apple-system, "Segoe UI", Tahoma, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(255,91,166,.22), transparent 55%),
+        radial-gradient(1000px 650px at 90% 30%, rgba(139,124,255,.20), transparent 55%),
+        radial-gradient(900px 600px at 50% 95%, rgba(46,217,163,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+      padding: 18px 14px 36px;
+    }
+
+    /* stickers */
+    .stickers{position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.7}
+    .st{position:absolute; font-size:clamp(18px,2.6vw,34px); filter: drop-shadow(0 10px 18px rgba(0,0,0,.10)); animation: floaty 9s ease-in-out infinite;}
+    .st:nth-child(2){animation-duration: 11s}
+    .st:nth-child(3){animation-duration: 13s}
+    .st:nth-child(4){animation-duration: 10s}
+    .st:nth-child(5){animation-duration: 12s}
+    @keyframes floaty{0%,100%{transform: translateY(0) rotate(-2deg)}50%{transform: translateY(-14px) rotate(2deg)}}
+
+    .container{
+      position:relative; z-index:1;
+      width:min(980px,100%);
+      margin:0 auto;
+      display:grid;
+      gap:14px;
+    }
+
+    .glass{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      overflow:hidden;
+    }
+
+    .top{
+      padding:16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .signature{
+      display:inline-flex; align-items:center; gap:10px;
+      background: rgba(255,91,166,.14);
+      border:1px solid rgba(255,91,166,.22);
+      padding:10px 14px;
+      border-radius:999px;
+      color: var(--pink);
+      font-weight:700;
+      box-shadow:0 10px 25px rgba(255,91,166,.10);
+    }
+
+    .header{
+      padding: 8px 16px 18px;
+      text-align:center;
+    }
+    .header h1{
+      margin:0;
+      font-size: clamp(22px, 3.4vw, 40px);
+      background: linear-gradient(135deg, rgba(255,91,166,1), rgba(139,124,255,1));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin:8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height:1.8;
+    }
+
+    .heart-badge{
+      margin:14px auto 0;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,91,166,.22);
+      background: rgba(255,91,166,.12);
+      box-shadow:0 10px 22px rgba(255,91,166,.10);
+    }
+    .heart{
+      width:22px;height:22px; position:relative; animation: heartbeat 1.2s infinite;
+    }
+    .heart::before,.heart::after{
+      content:"";
+      position:absolute;
+      width:12px;height:18px;
+      background: var(--pink);
+      border-radius: 12px 12px 0 0;
+    }
+    .heart::before{left:11px; transform: rotate(-45deg); transform-origin: 0 100%;}
+    .heart::after{left:0; transform: rotate(45deg); transform-origin: 100% 100%;}
+    @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+
+    .timer-card{
+      margin: 0 16px 16px;
+      border-radius: 20px;
+      border:1px solid rgba(139,124,255,.18);
+      background: rgba(139,124,255,.10);
+      padding:14px;
+      text-align:center;
+    }
+    .timer-card h3{
+      margin:0 0 8px;
+      color:#5b4cff;
+      font-size: 15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      font-weight:800;
+    }
+    #relationshipTimer{
+      font-size: clamp(18px, 3.2vw, 28px);
+      font-weight: 900;
+      background: linear-gradient(135deg, rgba(255,91,166,1), rgba(139,124,255,1));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      direction:ltr;
+      letter-spacing:.5px;
+      font-variant-numeric: tabular-nums;
+    }
+    .timer-label{margin-top:6px; color:var(--muted); font-size:12.5px}
+
+    /* section */
+    .section{padding:16px}
+    .sectionTitle{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      margin-bottom: 10px;
+    }
+    .sectionTitle b{font-size:15px}
+    .meta{font-size:12.5px; color:var(--muted); font-variant-numeric: tabular-nums;}
+
+    /* buttons */
+    .btn{
+      cursor:pointer;
+      border:1px solid rgba(0,0,0,.08);
+      background:#fff;
+      color: var(--text);
+      padding:12px 14px;
+      border-radius: 16px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+      user-select:none;
+      box-shadow: 0 10px 25px rgba(0,0,0,.06);
+      font-size:14px;
+      font-family:'Tajawal', sans-serif;
+      min-height: 44px; /* mobile friendly */
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{
+      background: var(--grad);
+      border-color: rgba(255,91,166,.22);
+    }
+    .btn.insta{
+      background: var(--insta-gradient);
+      color:white;
+      border:none;
+      box-shadow: 0 10px 25px rgba(228, 64, 95, 0.25);
+    }
+    .btn.insta:hover{box-shadow: 0 15px 30px rgba(228, 64, 95, 0.35);}
+    .btn.soft{background: rgba(255,255,255,.70);}
+
+    .btnRow{
+      display:flex; gap:10px; flex-wrap:wrap;
+      justify-content:flex-start;
+      align-items:center;
+      margin-top: 10px;
+    }
+
+    /* VIDEO (first section) */
+    .videoWrap{
+      border-radius: 20px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.08);
+      background:#000;
+      box-shadow: 0 14px 35px rgba(0,0,0,.10);
+    }
+    .custom-video{
+      width:100%;
+      height:auto;
+      display:block;
+      background:#111;
+      max-height: 70vh;
+    }
+
+    .controlsStack{
+      display:grid;
+      gap:10px;
+      margin-top:12px;
+    }
+    .rangeRow{
+      display:grid;
+      gap:8px;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.68);
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.05);
+    }
+    .rangeHead{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    input[type="range"]{
+      width:100%;
+      accent-color: var(--pink);
+      height: 28px;
+    }
+
+    /* Message typing box (second section) */
+    .message-box{
+      border-radius: 20px;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.70);
+      padding: 16px;
+      min-height: 170px;
+      line-height:1.9;
+      font-size: 15px;
+      color: var(--text);
+      overflow-wrap: break-word;
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      margin-top:12px;
+    }
+    .message-line{margin-bottom:10px; opacity:0; animation: fadeIn .45s ease forwards;}
+    @keyframes fadeIn{to{opacity:1}}
+    .typing-cursor{display:inline-block;width:2px;height:1.2em;background:var(--pink);animation:blink 1s infinite;margin-right:2px;vertical-align:middle;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+    /* Reply */
+    .reply-section{
+      margin-top:16px;
+      padding-top:14px;
+      border-top: 1px dashed rgba(0,0,0,.12);
+    }
+    .reply-section h3{
+      margin:0 0 10px;
+      font-size: 15px;
+      font-weight: 900;
+      color:#5b4cff;
+      display:flex; align-items:center; gap:8px;
+    }
+    .reply-input-container{position:relative}
+    .reply-input{
+      width:100%;
+      min-height:140px;
+      resize: vertical;
+      border-radius: 18px;
+      border:1px solid rgba(0,0,0,.10);
+      background: rgba(255,255,255,.70);
+      padding: 14px 14px 30px;
+      font-family:'Tajawal', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      outline:none;
+    }
+    .reply-input:focus{
+      border-color: rgba(255,91,166,.45);
+      box-shadow: 0 0 0 3px rgba(255,91,166,.18);
+    }
+    .char-counter{
+      position:absolute;
+      bottom:10px;
+      left:14px;
+      font-size: 12px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .reply-buttons{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+      margin-top:10px;
+    }
+    .dm-info{
+      margin-top:10px;
+      border-radius: 16px;
+      border:1px solid rgba(228,64,95,.18);
+      background: rgba(228,64,95,.08);
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height:1.7;
+    }
+    .dm-info strong{color:#cc2366}
+
+    /* Gallery + Song (last section) */
+    .twoCols{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+    @media (max-width: 860px){
+      .twoCols{grid-template-columns:1fr;}
+    }
+
+    .local-gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .local-gallery-item{
+      position:relative;
+      border-radius: 18px;
+      overflow:hidden;
+      aspect-ratio: 4/3;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.68);
+      cursor:pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    }
+    .local-gallery-item:hover{transform: translateY(-2px); box-shadow:0 16px 30px rgba(255,91,166,.14)}
+    .local-gallery-item img{width:100%; height:100%; object-fit:cover; display:block}
+    .local-gallery-overlay{
+      position:absolute; left:0; right:0; bottom:0;
+      padding: 10px 10px;
+      color:#fff;
+      font-size: 12px;
+      background: linear-gradient(transparent, rgba(0,0,0,.55));
+      opacity:0;
+      transition: opacity .18s ease;
+    }
+    .local-gallery-item:hover .local-gallery-overlay{opacity:1}
+    .gallery-placeholder{
+      border:1px dashed rgba(0,0,0,.18);
+      background: rgba(255,255,255,.55);
+      border-radius: 18px;
+      padding: 18px;
+      text-align:center;
+      color: var(--muted);
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.75);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+      z-index:9999;
+    }
+    .lightbox.active{display:flex}
+    .lightbox-content{position:relative; max-width: 94%; max-height: 92%;}
+    .lightbox-content img{
+      max-width: 100%;
+      max-height: 78vh;
+      border-radius: 16px;
+      box-shadow: 0 16px 50px rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.20);
+    }
+    .lightbox-close{
+      position:absolute; top:-46px; right:0;
+      background: rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.25);
+      color:#fff;
+      width:44px;height:44px;border-radius:14px;
+      cursor:pointer;
+      font-size:24px;
+      display:grid; place-items:center;
+    }
+    .lightbox-nav{
+      position:absolute; top:50%; transform:translateY(-50%);
+      background: rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.25);
+      color:#fff;
+      width:52px;height:52px;border-radius:999px;
+      cursor:pointer;
+      display:grid; place-items:center;
+      font-size:20px;
+    }
+    .lightbox-nav.prev{right:-8px}
+    .lightbox-nav.next{left:-8px}
+
+    /* Alerts */
+    .alert{
+      position:fixed;
+      top:16px;
+      right:16px;
+      max-width: 380px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      color:#fff;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      transform: translateX(140%);
+      transition: transform .45s ease;
+      z-index:10000;
+      box-shadow: 0 18px 45px rgba(0,0,0,.22);
+    }
+    .alert.show{transform: translateX(0)}
+    .alert .icon{width:28px;height:28px;border-radius:10px; display:grid; place-items:center; background:rgba(255,255,255,.18)}
+    .alert.success{background: rgba(46,217,163,.92)}
+    .alert.info{background: rgba(139,124,255,.92)}
+    .alert.warning{background: rgba(255,152,0,.92)}
+    .alert.danger{background: rgba(255,91,166,.92)}
+    .alert span{line-height:1.6; font-size: 13px}
+
+    /* End video modal */
+    .modal{
+      position:fixed; inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+      background: rgba(0,0,0,.45);
+      z-index: 12000;
+    }
+    .modal.show{display:flex}
+    .modalBox{
+      width:min(560px, 100%);
+      border-radius: 24px;
+      border:1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 22px 70px rgba(0,0,0,.25);
+      backdrop-filter: blur(12px);
+      overflow:hidden;
+      animation:modalSlide .28s ease;
+    }
+    @keyframes modalSlide{from{transform:translateY(18px); opacity:0;}to{transform:translateY(0); opacity:1;}}
+    .modalTop{
+      padding:14px 16px;
+      background: linear-gradient(135deg, rgba(255,91,166,.22), rgba(139,124,255,.18));
+      border-bottom:1px solid rgba(0,0,0,.06);
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+    }
+    .modalTop b{font-size:15px}
+    .modalBody{
+      padding:18px 18px 8px;
+      max-height: 55vh;
+      overflow:auto;
+      line-height:1.9;
+      color:var(--text);
+      font-size:15px;
+    }
+    .modalActions{
+      padding:14px 16px 16px;
+      display:flex; gap:10px; flex-wrap:wrap;
+      border-top:1px dashed rgba(0,0,0,.08);
+      justify-content:flex-end;
+    }
+
+    /* Footer */
+    .footer{
+      padding: 12px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    @media (max-width: 560px){
+      .footer{justify-content:center; text-align:center}
+      .btnRow .btn{width:100%}
+      .reply-buttons{justify-content:stretch}
+      .reply-buttons .btn{width:100%}
+    }
+
+    /* =========================
+       NEW: Poem like screenshot
+       ========================= */
+    .poemGrid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:14px;
+      align-items:start;
+    }
+    @media (max-width: 860px){
+      .poemGrid{grid-template-columns:1fr;}
+    }
+
+    .poemCard{
+      border-radius: 22px;
+      border:1px solid rgba(255,91,166,.18);
+      background: rgba(255,255,255,.68);
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      overflow:hidden;
+    }
+    .poemTop{
+      padding:12px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      background: linear-gradient(135deg, rgba(255,91,166,.10), rgba(139,124,255,.08));
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .poemTop .title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      color:#3b3457;
+    }
+    .miniPill{
+      font-size:12px;
+      color: var(--muted);
+      background: rgba(255,255,255,.70);
+      border:1px solid rgba(0,0,0,.06);
+      padding:8px 10px;
+      border-radius: 999px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      user-select:none;
+    }
+    .iconBtn{
+      cursor:pointer;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.75);
+      width:42px;
+      height:42px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      transition: transform .16s ease;
+      font-size:18px;
+    }
+    .iconBtn:hover{transform: translateY(-1px)}
+    .poemBody{
+      padding:14px;
+    }
+    .poemBox{
+      border-radius: 18px;
+      border:1px solid rgba(255,91,166,.20);
+      background:
+        radial-gradient(600px 280px at 10% 10%, rgba(255,91,166,.10), transparent 55%),
+        radial-gradient(600px 280px at 90% 20%, rgba(139,124,255,.10), transparent 55%),
+        rgba(255,255,255,.62);
+      padding:16px 14px;
+      min-height: 320px;
+      position:relative;
+      overflow:hidden;
+    }
+    .poemBox:before{
+      content:"";
+      position:absolute;
+      inset:10px;
+      border-radius: 16px;
+      border:1px dashed rgba(139,124,255,.28);
+      pointer-events:none;
+    }
+    .poemHeaderLine{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-bottom: 10px;
+      font-weight:900;
+      color:#3b3457;
+    }
+    .poemHeaderLine .rose{
+      filter: drop-shadow(0 10px 16px rgba(255,91,166,.18));
+    }
+    .poemText{
+      text-align:center;
+      line-height: 2.05;
+      color:#2A2440;
+      white-space: pre-wrap;
+      font-size: 15px;
+      padding: 4px 6px 2px;
+      outline:none;
+    }
+    .poemText[contenteditable="true"]{
+      background: rgba(255,255,255,.55);
+      border:1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding:10px 10px;
+    }
+    .poemFooter{
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(0,0,0,.10);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .audioCard{
+      border-radius: 22px;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.68);
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      overflow:hidden;
+    }
+    .audioTop{
+      padding:12px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      background: linear-gradient(135deg, rgba(139,124,255,.10), rgba(255,91,166,.08));
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .audioTop b{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size: 15px;
+    }
+    .audioBody{
+      padding:14px;
+    }
+    .audioHint{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .audioBtnRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+      margin-bottom: 12px;
+    }
+    .tinyBtn{
+      cursor:pointer;
+      border:1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,.80);
+      padding:10px 12px;
+      border-radius: 16px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      font-family:'Tajawal', sans-serif;
+      font-size: 13.5px;
+      min-height: 42px;
+      transition: transform .16s ease;
+      user-select:none;
+    }
+    .tinyBtn:hover{transform: translateY(-1px)}
+    .tinyBtn.primary{
+      background: var(--grad);
+      border-color: rgba(255,91,166,.22);
+    }
+    .seekWrap{
+      display:grid;
+      gap:10px;
+    }
+    .labelRow{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stickers" aria-hidden="true">
+    <div class="st" style="top:9%; left:7%;">🧸</div>
+    <div class="st" style="top:18%; right:10%;">💗</div>
+    <div class="st" style="top:64%; left:10%;">🍓</div>
+    <div class="st" style="top:72%; right:12%;">✨</div>
+    <div class="st" style="top:40%; left:46%;">🎀</div>
+  </div>
+
+  <div class="container">
+
+    <!-- Header card -->
+    <div class="glass">
+      <div class="top">
+        <div class="signature" id="signatureText">🧸 من عيسى إلى فرح</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn insta" id="igLink" href="https://instagram.com/wz7an" target="_blank" rel="noreferrer">📷 instagram.com/wz7an</a>
+          <button class="btn soft" id="refreshGalleryBtn">🔄 تحديث الصور</button>
+        </div>
+      </div>
+
+      <div class="header">
+        <h1 id="mainTitle">💖 للملكة فرح 💖</h1>
+        <p class="subtitle" id="mainSubtitle">هدية حب رقمية مع فيديو وصور من القلب</p>
+        <div class="heart-badge">
+          <div class="heart"></div>
+          <span id="badgeText">لك أنتِ</span>
+        </div>
+      </div>
+
+      <div class="timer-card">
+        <h3>💞مر على علاقتنا</h3>
+        <div id="relationshipTimer">0 يوم 00:00:00</div>
+        <div class="timer-label" id="timerLabel">منذ ١٨ يونيو ٢٠٢٥</div>
+      </div>
+    </div>
+
+    <!-- 1) VIDEO FIRST -->
+    <div class="glass">
+      <div class="section">
+        <div class="sectionTitle">
+          <b id="localVideoTitle">🎞️  فيديو حب  من عيتى الى فلح كملي الفيديو كامل في هديه</b>
+          <span class="meta" id="localTime">00:00 / 00:00</span>
+        </div>
+
+        <div class="videoWrap">
+          <video class="custom-video" id="localVideo" playsinline preload="metadata">
+            <source src="videos/love-video.mp4" type="video/mp4">
+            <source src="videos/love-video.webm" type="video/webm">
+            متصفحك لا يدعم تشغيل الفيديو.
+          </video>
+        </div>
+
+        <!-- controls OUTSIDE video (progress + volume) -->
+        <div class="controlsStack">
+          <div class="rangeRow">
+            <div class="rangeHead">
+              <span>⏱️ من هني تقدمين</span>
+              <span class="meta"><span id="localCurrentTime">00:00</span> / <span id="localDuration">00:00</span></span>
+            </div>
+            <input id="videoSeek" type="range" min="0" max="1000" value="0">
+          </div>
+
+          <div class="rangeRow">
+            <div class="rangeHead">
+              <span>🔊 صوت الفيديو</span>
+              <span class="meta" id="videoVolLabel">80%</span>
+            </div>
+            <input id="videoVol" type="range" min="0" max="1" step="0.01" value="0.8">
+          </div>
+
+          <div class="btnRow">
+            <button class="btn primary" id="playLocalBtn">▶ تشغيل</button>
+            <button class="btn soft" id="muteLocalBtn">🔊 صوت</button>
+            <button class="btn soft" id="rew5Btn">⏪ 5 ثواني</button>
+            <button class="btn soft" id="fwd5Btn">5 ثواني ⏩</button>
+            <button class="btn soft" id="fullscreenLocalBtn">⛶ شاشة كاملة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2) MESSAGE UNDER VIDEO -->
+    <div class="glass">
+      <div class="section">
+        <div class="sectionTitle">
+          <b>💌 الرساله</b>
+          <button class="btn primary" id="messageBtn">📨 شوفي الرساله</button>
+        </div>
+
+        <div class="message-box" id="messageBox">
+          اضغطي «عرض الرسالة» واذا خلصت بتشتغل الاغنيه واسمعيها عدل  🎬
+        </div>
+
+        <div class="reply-section">
+          <h3>💬 اذا ودج تردين من هني</h3>
+
+          <div class="reply-input-container">
+            <textarea class="reply-input" id="replyInput" placeholder="اكتبي رسالتج هني وانسخيها وارسليها لي 💝" maxlength="500"></textarea>
+            <div class="char-counter" id="charCounter">0/500</div>
+          </div>
+
+          <div class="reply-buttons">
+            <button class="btn soft" id="clearBtn">🗑️ مسح</button>
+            <button class="btn insta" id="sendDmBtn">📩 عيسى بانتظارج </button>
+          </div>
+
+          <div class="dm-info">
+            <strong>@wz7an</strong> دوسي على البنفسجيه اذا بتردين
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3) LAST: MEMORIES + SONG -->
+    <div class="glass">
+      <div class="section">
+        <div class="twoCols">
+
+          <!-- memories -->
+          <div>
+            <div class="sectionTitle">
+              <b>📸 نقطه من ذكرياتنا</b>
+            </div>
+
+            <div class="local-gallery" id="localImageGallery">
+              <div class="gallery-placeholder" id="galleryPlaceholder">
+                <b style="display:block; margin-bottom:6px;">ما لقينا صور للحين</b>
+                <div>حط صورك داخل مجلد <b>images</b> وسمّها مثل: <b>memory1.jpg</b></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- song -->
+          <div>
+            <div class="sectionTitle">
+              <b>🎵 اغنيتج</b>
+              <span class="meta" id="songTime">00:00 / 00:00</span>
+            </div>
+
+            <div class="btnRow">
+              <button class="btn primary" id="songBtn">▶ من هني تشغلينها يروحي </button>
+              <button class="btn soft" id="songMuteBtn">🔈 كتم</button>
+            </div>
+
+            <div class="controlsStack" style="margin-top:10px;">
+              <div class="rangeRow">
+                <div class="rangeHead">
+                  <span>🎧 شريط الأغنية</span>
+                  <span class="meta" id="songSeekMeta">—</span>
+                </div>
+                <input id="songSeek" type="range" min="0" max="1000" value="0">
+              </div>
+
+              <div class="rangeRow">
+                <div class="rangeHead">
+                  <span>🧁 صوت الأغنية</span>
+                  <span class="meta" id="songVolLabel">60%</span>
+                </div>
+                <input id="songVol" type="range" min="0" max="1" step="0.01" value="0.6">
+              </div>
+            </div>
+
+            <audio id="song" preload="metadata">
+              <source src="assets/song.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 4) NEW: POEM + VOICE (same vibe like your screenshot) -->
+    <div class="glass">
+      <div class="section">
+        <div class="poemGrid">
+
+          <!-- poem left -->
+          <div class="poemCard">
+            <div class="poemTop">
+              <div class="title">
+                <span>📜</span>
+                <span id="poemTitleTop">القصيده : بصوت عيتى</span>
+                <span class="miniPill" id="poemTimeTop">00:00 / 00:00</span>
+              </div>
+
+              <div style="display:flex; gap:10px; align-items:center;">
+                <span class="miniPill">✏️ اهداء</span>
+                <button class="iconBtn" id="poemEditBtn" title="عدليها لو تبين ">✏️</button>
+              </div>
+            </div>
+
+            <div class="poemBody">
+              <div class="poemBox">
+                <div class="poemHeaderLine">
+                  <span class="rose">🥺</span>
+                  <span id="poemName">اهداء لفلوحه</span>
+                  <span class="rose">🥺</span>
+                </div>
+
+                <div id="poemText" class="poemText" contenteditable="false">
+يا نور عيني ويا أحلى فرحة
+أنت الربيع في ليالي الشتاء
+أنت الأمل الذي إن غاب شقاه
+وأنتِ السر في أعماق الفضاء
+
+عيونك بحر وقلبك جوهرة
+تسبح فيها أحلامي والهواء
+يا من سكنت فؤادي وتربّعت به
+أصبحتِ أغنية في كل سماء
+
+سابقى أحبك مهما بعد المسافة
+وأكتب اسمك على جدران الوفاء
+لأنك أنت النعيم والحقيقة
+وأنت بداياتي وأنتِ النهاية
+                </div>
+
+                <div class="poemFooter">
+                  <span>🥺 رساله وصوت شتبين بعد</span>
+                  <button class="tinyBtn" id="copyPoemBtn">📋من هني تنسخينها</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- voice right -->
+          <div class="audioCard">
+            <div class="audioTop">
+              <b>🎙️ شتبين بعد عيسى وقراها لج</b>
+              <span class="meta" id="voiceTimeTop">00:00 / 00:00</span>
+            </div>
+
+            <div class="audioBody">
+              <div class="audioHint">💗 اهداء من عيسى لج انتي بس </div>
+
+              <div class="audioBtnRow">
+                <button class="tinyBtn primary" id="voicePlayBtn">▶  من هني تشغلينه</button>
+                <button class="tinyBtn" id="voiceMuteBtn">🔈 كتم</button>
+                <button class="tinyBtn" id="voiceRestartBtn">🔁 عيديها من هني</button>
+              </div>
+
+              <div class="seekWrap">
+                <div class="rangeRow" style="margin:0;">
+                  <div class="labelRow">
+                    <span>⏱️ شريط الصوت</span>
+                    <span class="meta" id="voiceSeekMeta">—</span>
+                  </div>
+                  <input id="voiceSeek" type="range" min="0" max="1000" value="0">
+                </div>
+
+                <div class="rangeRow" style="margin:0;">
+                  <div class="labelRow">
+                    <span>🔊 مستوى الصوت</span>
+                    <span class="meta" id="voiceVolLabel">70%</span>
+                  </div>
+                  <input id="voiceVol" type="range" min="0" max="1" step="0.01" value="0.7">
+                </div>
+              </div>
+
+              <audio id="voiceAudio" preload="metadata">
+                <!-- حط ملفك هنا -->
+                <source src="assets/voice.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="glass footer">
+      <div id="footerLeft">❤️ صنع بكل الحب - عيسى</div>
+      <div id="footerRight">للملكة فرح فقط</div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <button class="lightbox-close" id="lightboxClose">×</button>
+      <button class="lightbox-nav prev" id="lightboxPrev">›</button>
+      <button class="lightbox-nav next" id="lightboxNext">‹</button>
+    </div>
+  </div>
+
+  <!-- End Video Modal -->
+  <div class="modal" id="endModal" aria-hidden="true">
+    <div class="modalBox">
+      <div class="modalTop">
+        <b>🎀 خلص الفيديو…</b>
+        <button class="btn soft" id="closeEndModal">سكريها</button>
+      </div>
+      <div class="modalBody" id="endModalBody">
+        <div style="white-space:pre-wrap" id="endModalText"></div>
+      </div>
+      <div class="modalActions">
+        <a class="btn insta" id="endInstaLink" href="https://instagram.com/wz7an" target="_blank" rel="noreferrer">💬حساب عيتى</a>
+        <button class="btn primary" id="replayBtn">🔁 عيديها لو تبين يروحي</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert -->
+  <div class="alert" id="alert">
+    <div class="icon" id="alertIcon">i</div>
+    <span id="alertText"></span>
+  </div>
+
+  <script>
+    // =======================
+    // CONFIG (عدّل هنا فقط)
+    // =======================
+    const CONFIG = {
+      siteTitle: "💖 للملكة فرح 💖",
+      siteSubtitle: "اهداء من عيسى لفروحته",
+      badgeText: "لج انتي",
+      signature: "🧸 من عيسى الى فرح",
+      footerLeft: "❤️ صنع بكل الحب - عيسى",
+      footerRight: "للملكة فرح فقط",
+
+      relationshipStart: "2025-06-18T00:00:00+03:00",
+      timerLabel: "من ١٨ يونيو ٢٠٢٥",
+
+      files: {
+        video: "videos/love-video.mp4",
+        videoBackup: "videos/love-video.webm",
+        imagesFolder: "images/",
+        imageNames: [
+          "memory1.jpg","memory1.jpeg","memory1.png",
+          "memory2.jpg","memory2.jpeg","memory2.png",
+          "memory3.jpg","memory3.jpeg","memory3.png",
+          "memory4.jpg","memory4.jpeg","memory4.png",
+          "photo1.jpg","photo1.jpeg","photo1.png",
+          "photo2.jpg","photo2.jpeg","photo2.png",
+          "love.jpg","love.jpeg","love.png",
+          "us.jpg","us.jpeg","us.png"
+        ]
+      },
+
+      messageLines: [
+        "يا ملكة قلبي...",
+        "هذا الفيديو من صنع يدي لكِ فقط.",
+        "كل لحظة معكِ هي أجمل قصة حب.",
+        "عيناكِ نجوم تضيء عالمي المظلم.",
+        "قلبي يرفرف كلما سمع اسمكِ: فرح.",
+        "أنتِ الوردة التي جعلت حديقتي جنة.",
+        "أحببتكِ منذ اللحظة الأولى... وسأحبكِ إلى الأبد.",
+        "لكِ في قلبي مكان لا يملؤه أحد سواكِ.",
+        "أنتِ الحب الذي طالما حلمت به.",
+        "شكراً لأنكِ جعلتني أشعر بأنني الأكثر حظاً في الكون.",
+        "إلى الأبد... حبكِ ❤️"
+      ],
+
+      typing: { speedMs: 70, linePauseMs: 1100 },
+
+      instagram: {
+        username: "wz7an",
+        messagePrefix: "💌 من الملكة فرح:\n\n",
+        messageSuffix: "\n\n❤️ هذه رسالة من موقع حب خاص"
+      },
+
+      endVideoMessage: `إذا وصلنا لنهاية المقطع… تذكّري:
+أنا ما أبي منك شي إلا تكونين بخير… والباقي علي 💗
+
+كل لحظة معك ذكرى، وكل يوم معك هدية.
+شكراً لأنك جزء من حياتي.`,
+
+      autoPlayVideoAfterMessage: true
+    };
+
+    // =======================
+    // Helpers
+    // =======================
+    const $ = (id)=>document.getElementById(id);
+
+    function formatTime(seconds){
+      if (!isFinite(seconds)) return "00:00";
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+    }
+
+    function showAlert(text, type="info"){
+      const alertEl = $("alert");
+      const alertText = $("alertText");
+      const alertIcon = $("alertIcon");
+
+      alertEl.className = "alert";
+      alertEl.classList.add(type);
+
+      const iconMap = { success:"✓", info:"i", warning:"!", danger:"×" };
+      alertIcon.textContent = iconMap[type] || "i";
+      alertText.innerHTML = String(text).split("\n").join("<br>");
+
+      alertEl.classList.add("show");
+      clearTimeout(showAlert._t);
+      showAlert._t = setTimeout(()=> alertEl.classList.remove("show"), 5200);
+    }
+
+    // =======================
+    // State
+    // =======================
+    let isTyping = false;
+    let currentLineIndex = 0;
+    let typingInterval;
+
+    let localVideo;
+    let isLocalPlaying = false;
+
+    let discoveredImages = [];
+    let lightboxIndex = 0;
+
+    // =======================
+    // Boot
+    // =======================
+    document.addEventListener("DOMContentLoaded", ()=>{
+      $("mainTitle").textContent = CONFIG.siteTitle;
+      $("mainSubtitle").textContent = CONFIG.siteSubtitle;
+      $("badgeText").textContent = CONFIG.badgeText;
+      $("signatureText").textContent = CONFIG.signature;
+      $("footerLeft").textContent = CONFIG.footerLeft;
+      $("footerRight").textContent = CONFIG.footerRight;
+      $("timerLabel").textContent = CONFIG.timerLabel;
+
+      $("igLink").href = `https://instagram.com/${CONFIG.instagram.username}`;
+      $("endInstaLink").href = `https://instagram.com/${CONFIG.instagram.username}`;
+
+      $("endModalText").textContent = CONFIG.endVideoMessage;
+
+      // NEW: restore poem from localStorage
+      restorePoem();
+
+      setupEventListeners();
+      setupLocalVideoPlayer();
+      setupSong();
+      setupPoemVoice();     // NEW
+      discoverLocalImages();
+      updateCharCounter();
+      startRelationshipTimer();
+
+      setTimeout(()=> showAlert("🧸💗 اهداء ل روحي  ", "success"), 900);
+    });
+
+    // =======================
+    // Timer
+    // =======================
+    function startRelationshipTimer(){
+      updateRelationshipTimer();
+      setInterval(updateRelationshipTimer, 1000);
+    }
+
+    function updateRelationshipTimer(){
+      const startDate = new Date(CONFIG.relationshipStart);
+      const now = new Date();
+      const diffMs = now - startDate;
+
+      const days = Math.floor(diffMs / (1000*60*60*24));
+      const hours = Math.floor((diffMs % (1000*60*60*24)) / (1000*60*60));
+      const minutes = Math.floor((diffMs % (1000*60*60)) / (1000*60));
+      const seconds = Math.floor((diffMs % (1000*60)) / 1000);
+
+      $("relationshipTimer").textContent =
+        `${days} يوم ${String(hours).padStart(2,'0')}:${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+    }
+
+    // =======================
+    // Events
+    // =======================
+    function setupEventListeners(){
+      $("messageBtn").addEventListener("click", toggleMessage);
+
+      const replyInput = $("replyInput");
+      replyInput.addEventListener("input", updateCharCounter);
+      replyInput.addEventListener("keydown", (e)=>{
+        if(e.key === "Enter" && e.ctrlKey) sendDM();
+      });
+
+      $("clearBtn").addEventListener("click", ()=>{
+        replyInput.value = "";
+        updateCharCounter();
+        showAlert("🗑️ جذي انمسحت الرساله  ", "info");
+      });
+
+      $("sendDmBtn").addEventListener("click", sendDM);
+
+      $("refreshGalleryBtn").addEventListener("click", ()=>{
+        showAlert("🔄 جاري البحث عن صور جديدة...", "info");
+        discoverLocalImages();
+      });
+
+      // end modal
+      $("closeEndModal").addEventListener("click", ()=> $("endModal").classList.remove("show"));
+      $("replayBtn").addEventListener("click", ()=>{
+        $("endModal").classList.remove("show");
+        localVideo.currentTime = 0;
+        localVideo.play().catch(()=>{});
+      });
+      $("endModal").addEventListener("click", (e)=>{
+        if(e.target === $("endModal")) $("endModal").classList.remove("show");
+      });
+
+      // NEW: poem edit + copy
+      $("poemEditBtn").addEventListener("click", togglePoemEdit);
+      $("copyPoemBtn").addEventListener("click", copyPoem);
+    }
+
+    // =======================
+    // Typing message
+    // =======================
+    function toggleMessage(){
+      if(isTyping){
+        stopTyping();
+        $("messageBtn").textContent = "📨 شوفي الرساله";
+      }else{
+        startTypingMessage();
+        $("messageBtn").textContent = "⏸ وقفي الرساله";
+      }
+    }
+
+    function startTypingMessage(){
+      if(isTyping) return;
+      isTyping = true;
+      currentLineIndex = 0;
+      $("messageBox").innerHTML = "";
+      typeNextLine();
+    }
+
+    function typeNextLine(){
+      if(currentLineIndex >= CONFIG.messageLines.length){
+        isTyping = false;
+        $("messageBtn").textContent = "🔁 اقريها مرا ثانيه";
+
+        if(CONFIG.autoPlayVideoAfterMessage && localVideo && localVideo.paused){
+          const p = localVideo.play();
+          if(p){
+            p.then(()=>{ isLocalPlaying = true; updateLocalPlayButton(); showAlert("🎬 بتشتغل الاغنيه  تلقائيًا", "success"); })
+             .catch(()=>{});
+          }
+        }
+        return;
+      }
+
+      const line = CONFIG.messageLines[currentLineIndex];
+      const lineEl = document.createElement("div");
+      lineEl.className = "message-line";
+      $("messageBox").appendChild(lineEl);
+
+      let charIndex = 0;
+      clearInterval(typingInterval);
+
+      typingInterval = setInterval(()=>{
+        if(charIndex <= line.length){
+          lineEl.innerHTML = line.substring(0,charIndex) + '<span class="typing-cursor"></span>';
+          charIndex++;
+        }else{
+          clearInterval(typingInterval);
+          lineEl.textContent = line;
+          currentLineIndex++;
+          setTimeout(typeNextLine, CONFIG.typing.linePauseMs);
+        }
+      }, CONFIG.typing.speedMs);
+    }
+
+    function stopTyping(){
+      clearInterval(typingInterval);
+      isTyping = false;
+      $("messageBox").textContent = "اضغ «عرض الرسالة» واذا خلصت بتشتغل الاغنيه واسمعيها عدل  🎬";
+    }
+
+    // =======================
+    // Video Player (progress outside + volume)
+    // =======================
+    function setupLocalVideoPlayer(){
+      localVideo = $("localVideo");
+      const seek = $("videoSeek");
+      const vol = $("videoVol");
+
+      localVideo.src = CONFIG.files.video;
+      localVideo.volume = Number(vol.value);
+
+      localVideo.addEventListener("loadedmetadata", ()=>{
+        $("localDuration").textContent = formatTime(localVideo.duration);
+        $("localTime").textContent = `${formatTime(localVideo.currentTime)} / ${formatTime(localVideo.duration)}`;
+      });
+
+      localVideo.addEventListener("timeupdate", ()=>{
+        const dur = localVideo.duration || 0;
+        if(dur > 0){
+          seek.value = String(Math.floor((localVideo.currentTime/dur)*1000));
+        }
+        $("localCurrentTime").textContent = formatTime(localVideo.currentTime);
+        $("localTime").textContent = `${formatTime(localVideo.currentTime)} / ${formatTime(localVideo.duration)}`;
+      });
+
+      seek.addEventListener("input", ()=>{
+        const dur = localVideo.duration || 0;
+        if(dur > 0){
+          localVideo.currentTime = (Number(seek.value)/1000) * dur;
+        }
+      });
+
+      vol.addEventListener("input", ()=>{
+        localVideo.volume = Number(vol.value);
+        $("videoVolLabel").textContent = `${Math.round(localVideo.volume*100)}%`;
+        if(localVideo.volume === 0) localVideo.muted = true;
+        else localVideo.muted = false;
+        $("muteLocalBtn").textContent = localVideo.muted ? "🔇 كتم" : "🔊 صوت";
+      });
+
+      $("playLocalBtn").addEventListener("click", ()=>{
+        if(localVideo.paused){
+          const p = localVideo.play();
+          if(p){
+            p.then(()=>{ isLocalPlaying = true; updateLocalPlayButton(); })
+             .catch(()=> showAlert("⚠️ المتصفح منع التشغيل التلقائي. اضغط مرة ثانية.", "warning"));
+          }
+        }else{
+          localVideo.pause();
+          isLocalPlaying = false;
+          updateLocalPlayButton();
+        }
+      });
+
+      $("muteLocalBtn").addEventListener("click", ()=>{
+        localVideo.muted = !localVideo.muted;
+        $("muteLocalBtn").textContent = localVideo.muted ? "🔇 كتم" : "🔊 صوت";
+      });
+
+      $("rew5Btn").addEventListener("click", ()=>{
+        localVideo.currentTime = Math.max(0, localVideo.currentTime - 5);
+      });
+
+      $("fwd5Btn").addEventListener("click", ()=>{
+        const dur = localVideo.duration || 0;
+        if(dur > 0) localVideo.currentTime = Math.min(dur, localVideo.currentTime + 5);
+      });
+
+      $("fullscreenLocalBtn").addEventListener("click", ()=>{
+        if(localVideo.requestFullscreen) localVideo.requestFullscreen();
+        else if(localVideo.webkitRequestFullscreen) localVideo.webkitRequestFullscreen();
+      });
+
+      localVideo.addEventListener("ended", ()=>{
+        isLocalPlaying = false;
+        updateLocalPlayButton();
+        $("endModal").classList.add("show");
+      });
+
+      localVideo.addEventListener("error", ()=>{
+        if(localVideo.src.indexOf(CONFIG.files.videoBackup) === -1){
+          showAlert("⚠️ جاري تجربة فيديو احتياطي...", "warning");
+          localVideo.src = CONFIG.files.videoBackup;
+          localVideo.load();
+        }else{
+          showAlert("❌ تعذر تحميل الفيديو. تأكد من ملف videos/", "warning");
+        }
+      });
+
+      updateLocalPlayButton();
+      $("videoVolLabel").textContent = `${Math.round(localVideo.volume*100)}%`;
+    }
+
+    function updateLocalPlayButton(){
+      const btn = $("playLocalBtn");
+      if(isLocalPlaying){
+        btn.textContent = "⏸ وقفيه من هني";
+      }else{
+        if(localVideo && localVideo.currentTime > 0 && localVideo.duration && localVideo.currentTime < localVideo.duration){
+          btn.textContent = "▶ كمليه";
+        }else{
+          btn.textContent = "▶ شغليه من هني";
+        }
+      }
+    }
+
+    // =======================
+    // Song (optional)
+    // =======================
+    function setupSong(){
+      const song = $("song");
+      const songBtn = $("songBtn");
+      const songMuteBtn = $("songMuteBtn");
+      const songSeek = $("songSeek");
+      const songVol = $("songVol");
+      const songTime = $("songTime");
+
+      function updateSongTime(){
+        songTime.textContent = `${formatTime(song.currentTime)} / ${formatTime(song.duration)}`;
+        $("songSeekMeta").textContent = `${formatTime(song.currentTime)} / ${formatTime(song.duration)}`;
+      }
+
+      song.volume = Number(songVol.value);
+      $("songVolLabel").textContent = `${Math.round(song.volume*100)}%`;
+
+      song.addEventListener("loadedmetadata", updateSongTime);
+      song.addEventListener("timeupdate", ()=>{
+        const dur = song.duration || 0;
+        if(dur > 0){
+          songSeek.value = String(Math.floor((song.currentTime/dur)*1000));
+        }
+        updateSongTime();
+      });
+
+      songSeek.addEventListener("input", ()=>{
+        const dur = song.duration || 0;
+        if(dur > 0) song.currentTime = (Number(songSeek.value)/1000) * dur;
+      });
+
+      songVol.addEventListener("input", ()=>{
+        song.volume = Number(songVol.value);
+        $("songVolLabel").textContent = `${Math.round(song.volume*100)}%`;
+        if(song.volume === 0) song.muted = true;
+        else song.muted = false;
+        songMuteBtn.textContent = song.muted ? "🔇 كتم" : "🔈 صوت";
+      });
+
+      songMuteBtn.addEventListener("click", ()=>{
+        song.muted = !song.muted;
+        songMuteBtn.textContent = song.muted ? "🔇 كتم" : "🔈 صوت";
+      });
+
+      async function toggleSong(){
+        try{
+          // لو الصوت شغال وقفّه (علشان ما يتداخل)
+          const voice = $("voiceAudio");
+          if(voice && !voice.paused) voice.pause();
+
+          if(song.paused){
+            await song.play();
+            songBtn.textContent = "⏸ومن هني توقفينها ";
+          }else{
+            song.pause();
+            songBtn.textContent = "▶ شغليها من هني ";
+          }
+        }catch(e){
+          showAlert("⚠️ علق", "warning");
+        }
+      }
+      songBtn.addEventListener("click", toggleSong);
+
+      song.addEventListener("pause", ()=> songBtn.textContent = "▶ من هني تشغلينها يروحي ");
+      song.addEventListener("play", ()=> songBtn.textContent = "⏸ ومن هني تطفينها ");
+    }
+
+    // =======================
+    // NEW: Poem voice player (like screenshot)
+    // =======================
+    function setupPoemVoice(){
+      const voice = $("voiceAudio");
+      const playBtn = $("voicePlayBtn");
+      const muteBtn = $("voiceMuteBtn");
+      const restartBtn = $("voiceRestartBtn");
+      const seek = $("voiceSeek");
+      const vol = $("voiceVol");
+
+      function updateVoiceUI(){
+        $("voiceTimeTop").textContent = `${formatTime(voice.currentTime)} / ${formatTime(voice.duration)}`;
+        $("poemTimeTop").textContent = `${formatTime(voice.currentTime)} / ${formatTime(voice.duration)}`;
+        $("voiceSeekMeta").textContent = `${formatTime(voice.currentTime)} / ${formatTime(voice.duration)}`;
+      }
+
+      // init
+      voice.volume = Number(vol.value);
+      $("voiceVolLabel").textContent = `${Math.round(voice.volume * 100)}%`;
+      updateVoiceUI();
+
+      voice.addEventListener("loadedmetadata", ()=>{
+        updateVoiceUI();
+      });
+
+      voice.addEventListener("timeupdate", ()=>{
+        const dur = voice.duration || 0;
+        if(dur > 0){
+          seek.value = String(Math.floor((voice.currentTime / dur) * 1000));
+        }
+        updateVoiceUI();
+      });
+
+      seek.addEventListener("input", ()=>{
+        const dur = voice.duration || 0;
+        if(dur > 0){
+          voice.currentTime = (Number(seek.value) / 1000) * dur;
+        }
+      });
+
+      vol.addEventListener("input", ()=>{
+        voice.volume = Number(vol.value);
+        $("voiceVolLabel").textContent = `${Math.round(voice.volume * 100)}%`;
+        voice.muted = voice.volume === 0;
+        muteBtn.textContent = voice.muted ? "🔇 كتم" : "🔈 كتم";
+      });
+
+      muteBtn.addEventListener("click", ()=>{
+        voice.muted = !voice.muted;
+        muteBtn.textContent = voice.muted ? "🔇 كتم" : "🔈 كتم";
+      });
+
+      restartBtn.addEventListener("click", ()=>{
+        voice.currentTime = 0;
+        voice.play().catch(()=>{});
+      });
+
+      playBtn.addEventListener("click", async ()=>{
+        try{
+          // لو الاغنية شغالة وقفها علشان ما يتداخل
+          const song = $("song");
+          if(song && !song.paused) song.pause();
+
+          if(voice.paused){
+            await voice.play();
+            playBtn.textContent = "⏸  طفيه من هني";
+          }else{
+            voice.pause();
+            playBtn.textContent = "▶ شغليه من هني ";
+          }
+        }catch(e){
+          showAlert("⚠️ علق", "warning");
+        }
+      });
+
+      voice.addEventListener("play", ()=> playBtn.textContent = "⏸  شغليه من هني ");
+      voice.addEventListener("pause", ()=> playBtn.textContent = "▶ شغليه من هني  ");
+      voice.addEventListener("ended", ()=> playBtn.textContent = "▶ شغليه من هني  ");
+    }
+
+    // =======================
+    // NEW: Poem edit/copy + persist
+    // =======================
+    function togglePoemEdit(){
+      const box = $("poemText");
+      const btn = $("poemEditBtn");
+
+      const isEditing = box.getAttribute("contenteditable") === "true";
+      if(isEditing){
+        box.setAttribute("contenteditable","false");
+        btn.textContent = "✏️";
+        savePoem();
+        showAlert("✅ تمت المعلومات ", "success");
+      }else{
+        box.setAttribute("contenteditable","true");
+        btn.textContent = "✅";
+        box.focus();
+        showAlert("✏️ الحين تقدرين تعدلينها يروحي", "info");
+      }
+    }
+
+    function copyPoem(){
+      const text = $("poemText").innerText.trim();
+      navigator.clipboard.writeText(text).then(()=>{
+        showAlert("📋نسختيها", "success");
+      }).catch(()=>{
+        showAlert("⚠️ ما قدرت أنسخ ", "warning");
+      });
+    }
+
+    function savePoem(){
+      try{
+        localStorage.setItem("poem_text_saved", $("poemText").innerText);
+      }catch(e){}
+    }
+
+    function restorePoem(){
+      try{
+        const saved = localStorage.getItem("poem_text_saved");
+        if(saved && saved.trim().length){
+          $("poemText").innerText = saved;
+        }
+      }catch(e){}
+    }
+
+    // =======================
+    // Gallery discovery (local images/)
+    // =======================
+    function discoverLocalImages(){
+      const gallery = $("localImageGallery");
+      const placeholder = $("galleryPlaceholder");
+      discoveredImages = [];
+      placeholder.style.display = "none";
+
+      let loadedCount = 0;
+      const maxAttempts = CONFIG.files.imageNames.length;
+
+      if(maxAttempts === 0){
+        placeholder.style.display = "block";
+        return;
+      }
+
+      CONFIG.files.imageNames.forEach((imageName)=>{
+        const img = new Image();
+        const imagePath = CONFIG.files.imagesFolder + imageName;
+
+        img.onload = ()=>{
+          discoveredImages.push({
+            src: imagePath,
+            title: `ذكرى ${discoveredImages.length + 1}`,
+            alt: `صورة ذكريات ${discoveredImages.length + 1}`
+          });
+          loadedCount++;
+          if(loadedCount === maxAttempts) finalizeGallery();
+        };
+
+        img.onerror = ()=>{
+          loadedCount++;
+          if(loadedCount === maxAttempts) finalizeGallery();
+        };
+
+        img.src = imagePath;
+      });
+
+      function finalizeGallery(){
+        if(discoveredImages.length === 0){
+          placeholder.style.display = "block";
+          placeholder.innerHTML = `
+            <b style="display:block; margin-bottom:6px;">لم يتم العثور على صور</b>
+            <div>أضف صورك في <b>images/</b> وسمّها مثل: <b>memory1.jpg</b></div>
+          `;
+          gallery.innerHTML = "";
+          gallery.appendChild(placeholder);
+        }else{
+          updateLocalGallery();
+          showAlert(`📸 تم اكتشاف ${discoveredImages.length} صورة`, "success");
+        }
+      }
+    }
+
+    function updateLocalGallery(){
+      const gallery = $("localImageGallery");
+      gallery.innerHTML = "";
+
+      discoveredImages.forEach((image, index)=>{
+        const item = document.createElement("div");
+        item.className = "local-gallery-item";
+        item.innerHTML = `
+          <img src="${image.src}" alt="${image.alt}" loading="lazy">
+          <div class="local-gallery-overlay">${image.title}</div>
+        `;
+        item.addEventListener("click", ()=> openLightbox(index));
+        gallery.appendChild(item);
+      });
+    }
+
+    // =======================
+    // Lightbox
+    // =======================
+    function openLightbox(index){
+      if(!discoveredImages.length) return;
+      lightboxIndex = index;
+      $("lightbox").classList.add("active");
+      updateLightbox();
+
+      $("lightboxClose").onclick = ()=> $("lightbox").classList.remove("active");
+      $("lightboxPrev").onclick = ()=> { lightboxIndex = (lightboxIndex - 1 + discoveredImages.length) % discoveredImages.length; updateLightbox(); };
+      $("lightboxNext").onclick = ()=> { lightboxIndex = (lightboxIndex + 1) % discoveredImages.length; updateLightbox(); };
+
+      $("lightbox").onclick = (e)=>{ if(e.target === $("lightbox")) $("lightbox").classList.remove("active"); };
+
+      const keyHandler = (e)=>{
+        if(!$("lightbox").classList.contains("active")) return;
+        if(e.key === "Escape"){ $("lightbox").classList.remove("active"); document.removeEventListener("keydown", keyHandler); }
+        if(e.key === "ArrowRight"){ lightboxIndex = (lightboxIndex - 1 + discoveredImages.length) % discoveredImages.length; updateLightbox(); }
+        if(e.key === "ArrowLeft"){ lightboxIndex = (lightboxIndex + 1) % discoveredImages.length; updateLightbox(); }
+      };
+      document.addEventListener("keydown", keyHandler);
+    }
+
+    function updateLightbox(){
+      const img = discoveredImages[lightboxIndex];
+      $("lightboxImage").src = img.src;
+      $("lightboxImage").alt = img.alt;
+    }
+
+    // =======================
+    // Reply / DM
+    // =======================
+    function updateCharCounter(){
+      const v = $("replyInput").value.length;
+      const max = $("replyInput").maxLength;
+      $("charCounter").textContent = `${v}/${max}`;
+      $("charCounter").style.color = (v > max * 0.8) ? "#FF5BA6" : "var(--muted)";
+    }
+
+    function sendDM(){
+      const message = $("replyInput").value.trim();
+      if(!message){
+        showAlert("⚠️ ارسلي اي شيء يروح عيسى  ", "warning");
+        $("replyInput").focus();
+        return;
+      }
+      if(message.length < 3){
+        showAlert("⚠️يروحي الرساله قصيره ", "warning");
+        return;
+      }
+
+      const url = `https://www.instagram.com/${CONFIG.instagram.username}/`;
+      const win = window.open(url, "_blank");
+
+      if(win){
+        showAlert(
+          `✅ انفتح حسابي  @${CONFIG.instagram.username}\n\n📝 انسخي  الرساله وارسليها بالـ DM:\n"${message.substring(0,60)}${message.length>60?'...':''}"`,
+          "success"
+        );
+
+        try{
+          localStorage.setItem("farah_last_dm", message);
+          localStorage.setItem("farah_dm_time", new Date().toISOString());
+        }catch(e){}
+
+        setTimeout(()=> showAlert("💡 :   ارسليها خاص     ", "info"), 3500);
+      }else{
+        showAlert("⚠️ ", "warning");
+      }
+    }
+  </script>
+</body>
+</html>
