@@ -1775,6 +1775,207 @@
     .main-content {
       display: none;
     }
+
+    /* === التعديلات الجديدة لتحسين الجوال === */
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    /* تحسين للأجهزة الصغيرة جداً */
+    @media (max-width: 360px) {
+      .lock-title {
+        font-size: 22px !important;
+        line-height: 1.3;
+      }
+      
+      .lock-subtitle {
+        font-size: 13px !important;
+        line-height: 1.5;
+      }
+      
+      .riddle-text {
+        font-size: 14px !important;
+        padding: 15px 12px !important;
+        line-height: 1.7;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      
+      .lock-input {
+        font-size: 16px !important;
+        padding: 16px 10px !important;
+        letter-spacing: 1px;
+      }
+      
+      .lock-btn {
+        font-size: 18px !important;
+        padding: 16px 10px !important;
+      }
+    }
+
+    /* تحسين للأجهزة المتوسطة */
+    @media (max-width: 480px) {
+      body {
+        padding: 12px 10px 24px !important;
+      }
+      
+      .container {
+        gap: 12px !important;
+      }
+      
+      .lock-frame {
+        padding: 25px 15px !important;
+        border-radius: 20px !important;
+      }
+      
+      .riddle-text {
+        font-size: 15px;
+        line-height: 1.8;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        display: block;
+      }
+      
+      /* تحسين جميع النصوص في المربعات */
+      .memory-title,
+      .countdown-value,
+      .sectionTitle b,
+      .header h1,
+      .memory-modal-title {
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* تحسين خاص لـ iPhone */
+    @supports (-webkit-touch-callout: none) {
+      .lock-input {
+        font-size: 18px !important;
+        padding: 18px 15px !important;
+      }
+      
+      .lock-btn {
+        padding: 20px 15px !important;
+      }
+      
+      /* تحسين لمنع الزوم التلقائي */
+      input, textarea, select {
+        font-size: 16px !important;
+      }
+    }
+
+    /* تحسين للمربعات في صفحة الذكريات */
+    @media (max-width: 768px) {
+      .memory-item {
+        padding: 20px 15px !important;
+        min-height: 200px !important;
+      }
+      
+      .memory-title {
+        font-size: 18px !important;
+        line-height: 1.4;
+        white-space: normal;
+        word-break: break-word;
+      }
+      
+      .memory-message {
+        font-size: 14px !important;
+        line-height: 1.6;
+      }
+    }
+
+    /* تحسين خاص لـ iPad */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .container {
+        width: 90% !important;
+      }
+      
+      .lock-container {
+        width: 80% !important;
+      }
+    }
+
+    /* تحسين للعناوين الطويلة */
+    .header h1 {
+      white-space: normal !important;
+      word-break: break-word !important;
+      line-height: 1.3 !important;
+      margin-bottom: 10px !important;
+    }
+
+    /* تحسين لجميع النصوص في الموقع */
+    .subtitle,
+    .riddle-text,
+    .message-box,
+    .poemText,
+    .reply-input {
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
+      hyphens: auto;
+    }
+
+    /* إصلاح مشكلة القص في بعض الأجهزة */
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    /* تحسين viewport للأجهزة المختلفة */
+    @media (orientation: landscape) and (max-height: 500px) {
+      .lock-screen {
+        padding: 10px !important;
+      }
+      
+      .lock-frame {
+        padding: 20px 15px !important;
+      }
+      
+      .lock-title {
+        font-size: 24px !important;
+        margin-bottom: 5px !important;
+      }
+      
+      .riddle-text {
+        font-size: 14px !important;
+        padding: 12px 10px !important;
+      }
+    }
+
+    /* تحسين خاص لـ Samsung Galaxy Fold */
+    @media (max-width: 280px) {
+      .lock-title {
+        font-size: 20px !important;
+      }
+      
+      .lock-subtitle {
+        font-size: 12px !important;
+      }
+      
+      .riddle-text {
+        font-size: 12px !important;
+        padding: 10px 8px !important;
+      }
+    }
+
+    /* === تحسين القصيدة فقط === */
+    .poemText {
+      white-space: pre-wrap !important;
+      word-wrap: normal !important;
+      overflow-wrap: normal !important;
+      font-family: 'Tajawal', sans-serif !important;
+      direction: rtl !important;
+      text-align: center !important;
+      line-height: 2.05 !important;
+      font-size: 15px !important;
+    }
   </style>
 </head>
 
@@ -1800,12 +2001,12 @@
             <span>حاولي تحلينه</span>
           </div>
           <div class="riddle-text">
-            ❓ أنا كلمة مكونة من 5 أحرف<br>
-            ❓ أتكون من (ألف - ميم - واو - ألف - حاء)<br>
-            ❓ أنا الشعور الذي يجعلك تبتسمين<br>
-            ❓ أنا ما يشعر به عيسى تجاه فرح<br>
-            ❓ الحرف الأول يبدأ اسمك به<br>
-            ❓ الحرفان الأخيران هما أول حرفين من اسمي
+            ❓ انا كلمه مكونه من 5 احرف<br>
+            ❓ انا شيء ما ينشاف بس مرات انشاف<br>
+            ❓ انا الشيء الي يخلي عيسى يبتسم<br>
+            ❓ انا الكلمه الي تهدي عيسى دايما<br>
+            ❓ الحرف الاول يبدا بكلمه احبك<br>
+            ❓ اخر حرف من اسمج موجود فيني
           </div>
           <div class="riddle-hint">
             تبين تلميح ؟ ماكو<br>
@@ -2143,8 +2344,8 @@
             <div class="poemCard">
               <div class="poemTop">
                 <div class="title">
-                  <span>📜</span>
-                  <span id="poemTitleTop">القصيده : بصوت عيتى</span>
+                  <span>🥺</span>
+                  <span id="poemTitleTop">القصيده : اهدااااء لفلووحتيي</span>
                   <span class="miniPill" id="poemTimeTop">00:00 / 00:00</span>
                 </div>
 
@@ -2230,7 +2431,7 @@
             <!-- voice right -->
             <div class="audioCard">
               <div class="audioTop">
-                <b>🎙️  شتبين بعد عيسى وقالها لج</b>
+                <b> شتبين بعد  اهداء من عيتى 🥺 </b>
                 <span class="meta" id="voiceTimeTop">00:00 / 00:00</span>
               </div>
 
@@ -2254,7 +2455,7 @@
 
                   <div class="rangeRow" style="margin:0;">
                     <div class="labelRow">
-                      <span>🔊 صوت عيتى </span>
+                      <span>🔊 صوتها </span>
                       <span class="meta" id="voiceVolLabel">70%</span>
                     </div>
                     <input id="voiceVol" type="range" min="0" max="1" step="0.01" value="0.7">
@@ -2521,7 +2722,7 @@
         const enteredPassword = passwordInput.value.trim().toLowerCase();
         
         if (!enteredPassword) {
-          lockError.textContent = "❌ أدخل الجواب أولاً";
+          lockError.textContent = "اكتبي يالغبيه ";
           lockError.classList.add('show');
           passwordInput.focus();
           return;
@@ -2538,7 +2739,7 @@
         } else {
           // كلمة المرور خاطئة
           if (attempts >= CONFIG.maxAttempts) {
-            lockError.textContent = "غبيه غبيه فكري عدل يله بعطيج محاولات من عندي";
+            lockError.textContent = "مااعلييه بس  فكري عدل يله بعطيج محاولات من عندي";
             lockError.classList.add('show');
             unlockBtn.disabled = true;
             passwordInput.disabled = true;
