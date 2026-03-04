@@ -2030,7 +2030,138 @@ body{
 .container, .wrap, main, .page {
   padding-bottom: calc(90px + env(safe-area-inset-bottom));
 }
+/* =========================
+   8 Months Redirect Portal
+   ========================= */
+.portalOverlay{
+  position: fixed;
+  inset: 0;
+  z-index: 200000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(1200px 700px at 20% 20%, rgba(255,91,166,.18), transparent 55%),
+    radial-gradient(900px 650px at 80% 30%, rgba(139,124,255,.18), transparent 55%),
+    radial-gradient(900px 700px at 50% 85%, rgba(46,217,163,.12), transparent 55%),
+    #050014;
+  overflow: hidden;
+}
 
+.portalOverlay.show{ display:flex; animation: portalFadeIn .22s ease forwards; }
+
+.portalCore{
+  position: relative;
+  width: min(520px, 92vw);
+  padding: 28px 22px;
+  border-radius: 28px;
+  text-align: center;
+  color: #fff;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.16);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 90px rgba(0,0,0,.55);
+  transform: translateY(10px) scale(.98);
+  animation: corePop .55s cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+.portalTitle{
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #ff5ba6, #8b7cff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.portalSub{
+  font-size: 14px;
+  opacity: .85;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.portalRing{
+  position:absolute;
+  inset:-140px;
+  border-radius: 999px;
+  background:
+    conic-gradient(from 0deg,
+      rgba(255,91,166,.00),
+      rgba(255,91,166,.35),
+      rgba(139,124,255,.35),
+      rgba(46,217,163,.18),
+      rgba(255,91,166,.00)
+    );
+  filter: blur(0.5px);
+  animation: ringSpin 1.25s linear infinite;
+  opacity: .85;
+}
+
+.portalRing::after{
+  content:"";
+  position:absolute;
+  inset: 160px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,.18), transparent 60%);
+  filter: blur(8px);
+}
+
+.portalParticles{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity: .85;
+}
+
+.portalParticles i{
+  position:absolute;
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 0 10px rgba(255,255,255,.85);
+  animation: particleFly 900ms ease-in infinite;
+}
+
+.portalBeam{
+  position:absolute;
+  inset:0;
+  background: radial-gradient(800px 380px at 50% 65%, rgba(255,91,166,.10), transparent 60%);
+  animation: beamPulse .8s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.portalExit{
+  animation: portalExit .9s cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+@keyframes portalFadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+@keyframes corePop{
+  0%{transform: translateY(12px) scale(.96); opacity:0}
+  100%{transform: translateY(0) scale(1); opacity:1}
+}
+@keyframes ringSpin{
+  to{ transform: rotate(360deg); }
+}
+@keyframes beamPulse{
+  0%,100%{opacity:.55}
+  50%{opacity:1}
+}
+@keyframes particleFly{
+  0%{ transform: translateY(40px) scale(.6); opacity:0 }
+  15%{opacity:1}
+  100%{ transform: translateY(-160px) scale(1.2); opacity:0 }
+}
+@keyframes portalExit{
+  0%{ transform: scale(1); filter: blur(0); opacity:1 }
+  60%{ transform: scale(1.06); filter: blur(0); opacity:1 }
+  100%{ transform: scale(1.35); filter: blur(10px); opacity:0 }
+}
   </style>
 </head>
 
@@ -2193,7 +2324,7 @@ body{
       <div class="glass">
         <div class="section">
           <div class="sectionTitle">
-            <b>⏳ عداد تنازلي لمفاجاه 8 شهور</b>
+            <b>⏳ عداد تنازلي لمفاجاه 9 شهور</b>
             <span class="meta" id="countdownNextDate">١٢ فبراير ٢٠٢٦</span>
           </div>
           
@@ -2600,7 +2731,7 @@ body{
           icon: "🎉",
           locked: true,
           message: "كل شيييء بووقتته حلللووو",
-          password: "اموااح"
+          password: "احبك"
         },
         {
           id: 2,
@@ -3058,18 +3189,24 @@ body{
             }
           `;
           
-          memoryEl.addEventListener('click', () => {
-            if (!isUnlocked) {
-              currentMemory = memory;
-              memoryModalTitle.textContent = `🔓 كل شيء بوقته حلو  ${memory.title}`;
-              memoryModalDesc.textContent = `كل شيء بوقته حلو "${memory.title}"`;
-              memoryCodeInput.value = '';
-              memoryModal.classList.add('active');
-              memoryCodeInput.focus();
-            } else {
-              showAlert(`📜 ${memory.title}\n${memory.date}\n\n${memory.message}`, "info");
-            }
-          });
+         memoryEl.addEventListener('click', () => {
+  if (!isUnlocked) {
+    currentMemory = memory;
+    memoryModalTitle.textContent = `🔓 كل شيء بوقته حلو  ${memory.title}`;
+    memoryModalDesc.textContent = `كل شيء بوقته حلو "${memory.title}"`;
+    memoryCodeInput.value = '';
+    memoryModal.classList.add('active');
+    setTimeout(()=> memoryCodeInput.focus(), 50);
+  } else {
+    // ✅ إذا كانت مفاجأة 8 شهور وانفتحت قبل: ضغطة وحدة وتحويل
+    if (memory.id === 1) {
+      redirectWithPortal("https://b4bp.github.io/darkness-to-love-farah/");
+      return;
+    }
+
+    showAlert(`📜 ${memory.title}\n${memory.date}\n\n${memory.message}`, "info");
+  }
+});
           
           memoriesGrid.appendChild(memoryEl);
         });
@@ -3094,44 +3231,27 @@ body{
       });
       
       // معالجة فتح الذكرى
-      submitMemoryCode.addEventListener('click', () => {
-        const code = memoryCodeInput.value.trim();
-        
-        if (!code) {
-          showAlert(" يا ملقوفه قلنا كل شيء بوقته حلو ", "warning");
-          return;
-        }
-        
-        if (code === currentMemory.password) {
-          // فتح الذكرى
-          unlockedMemoryIds.push(currentMemory.id);
-          localStorage.setItem('memories-unlocked', JSON.stringify(unlockedMemoryIds));
-          
-          // تحديث الواجهة
-          createMemories();
-          
-          // إغلاق النافذة وإظهار الرسالة
-          memoryModal.classList.remove('active');
-          showAlert(`🎉 تم فتح ذكرى "${currentMemory.title}"!\n\n${currentMemory.message}`, "success");
-          
-          // تأثير صوتي
-          try {
-            const sound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3');
-            sound.volume = 0.3;
-            sound.play();
-          } catch(e) {}
-          
-          // تحديث العداد
-          unlockedMemories++;
-          memoriesCount.textContent = `${unlockedMemories}/${CONFIG.memories.length} مفتوحة`;
-        } else {
-          showAlert("يا ملقوفه قلنا كل شيء بوقته حلو ", "danger");
-          memoryCodeInput.style.borderColor = '#ff5ba6';
-          setTimeout(() => {
-            memoryCodeInput.style.borderColor = '';
-          }, 1000);
-        }
-      });
+      if (code === currentMemory.password) {
+
+  // ✅ لا تكرر الحفظ إذا كانت مفتوحة من قبل
+  if (!unlockedMemoryIds.includes(currentMemory.id)) {
+    unlockedMemoryIds.push(currentMemory.id);
+    localStorage.setItem('memories-unlocked', JSON.stringify(unlockedMemoryIds));
+  }
+
+  createMemories();
+  memoryModal.classList.remove('active');
+
+  // ✅ أول مرة تفتح مفاجأة 8 شهور: حول مباشرة
+  if (currentMemory.id === 1) {
+    localStorage.setItem("memory8Opened", "true");
+    redirectWithPortal("https://b4bp.github.io/darkness-to-love-farah/");
+    return;
+  }
+
+  showAlert(`🎉 تمت المعلومات  "${currentMemory.title}"!\n\n${currentMemory.message}`, "success");
+}
+      }
       
       // إلغاء فتح الذكرى
       cancelMemory.addEventListener('click', () => {
@@ -3151,7 +3271,7 @@ body{
           submitMemoryCode.click();
         }
       });
-    }
+    
 
     // =======================
     // تهيئة الموقع بعد فتح القفل
@@ -3219,47 +3339,53 @@ body{
 // عداد تنازلي لذكرى 8 شهور (من اليوم إلى 18 فبراير 2026)
 // =======================
 function initCountdown() {
+
   function updateCountdown() {
     const now = new Date();
-    
-    // تاريخ 18 فبراير 2026 (بعد 35 يوم من 14 يناير 2026)
-    const targetDate = new Date(2026, 1, 18, 12, 0, 0); // 1 = فبراير (الشهر يبدأ من 0)
-    
+
+    // 18 من هذا الشهر الساعة 12
+    let targetDate = new Date(now.getFullYear(), now.getMonth(), 18, 12, 0, 0);
+
+    // إذا تعدينا يوم 18، يحسب لـ 18 الشهر الجاي
+    if (now > targetDate) {
+      targetDate = new Date(now.getFullYear(), now.getMonth() + 1, 18, 12, 0, 0);
+    }
+
     const diff = targetDate - now;
-    
+
     if (diff <= 0) {
-      // إذا انتهى العد التنازلي
-      document.getElementById('countdownDays').textContent = "00";
+      document.getElementById('countdownDays').textContent = "000";
       document.getElementById('countdownHours').textContent = "00";
       document.getElementById('countdownMinutes').textContent = "00";
       document.getElementById('countdownSeconds').textContent = "00";
-      document.querySelector('.countdown-title').innerHTML = 
-        "🎉 وصلنا لذكرى 8 شهور! مبروك يا حبيبتي ❤️<br><small style='font-size: 14px; color: var(--muted);'>18 فبراير 2026</small>";
+
+      document.querySelector('.countdown-title').innerHTML =
+        "🎉 وصلنا للتاريخ! ❤️";
+
       return;
     }
-    
+
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
+
     document.getElementById('countdownDays').textContent = String(days).padStart(3, '0');
     document.getElementById('countdownHours').textContent = String(hours).padStart(2, '0');
     document.getElementById('countdownMinutes').textContent = String(minutes).padStart(2, '0');
     document.getElementById('countdownSeconds').textContent = String(seconds).padStart(2, '0');
-    
-    document.querySelector('.countdown-title').innerHTML = 
-      `⏰ باقي  ${days} يوم ونكمل 8 شهور ❤️<br>
-      <small style="font-size: 14px; color: var(--muted);">من اليوم لين 18 فبراير 2026</small>`;
-    
-    // تحديث التاريخ
-    document.getElementById('countdownNextDate').textContent = "18 فبراير 2026";
+
+    document.querySelector('.countdown-title').innerHTML =
+      `⏰ باقي ${days} يوم ❤️<br>
+      <small style="font-size:14px;color:var(--muted);">من الان الى 18</small>`;
+
+    document.getElementById('countdownNextDate').textContent =
+      `18 / ${now.getMonth() + 1} / ${now.getFullYear()}`;
   }
-  
+
   updateCountdown();
   setInterval(updateCountdown, 1000);
-
-    }
+}
 
     // =======================
     // باقي دوال الموقع (الأصلية)
@@ -3856,9 +3982,71 @@ function initCountdown() {
         showAlert("⚠️ ", "warning");
       }
     }
+    // =======================
+// Redirect with portal transition (8 months)
+// =======================
+function redirectWithPortal(url){
+  // لا تكررها بنفس الجلسة
+  if(sessionStorage.getItem("eight_months_redirected") === "1") {
+    window.location.href = url;
+    return;
+  }
+  sessionStorage.setItem("eight_months_redirected","1");
+
+  const overlay = document.getElementById("portalOverlay");
+  const particles = document.getElementById("portalParticles");
+
+  // جهّز جزيئات بسيطة
+  particles.innerHTML = "";
+  const count = 46;
+  for(let i=0;i<count;i++){
+    const p = document.createElement("i");
+    const left = Math.random()*100;
+    const top = Math.random()*100;
+    const delay = Math.random()*0.55;
+    const size = Math.random()*2 + 2;
+    p.style.left = left + "%";
+    p.style.top = top + "%";
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+    p.style.animationDelay = delay + "s";
+    particles.appendChild(p);
+  }
+
+  overlay.classList.add("show");
+
+  // صوت خفيف لو تبغى (اختياري)
+  try{
+    const s = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-magical-coin-win-1936.mp3");
+    s.volume = 0.22;
+    s.play();
+  }catch(e){}
+
+  // خروج + تحويل
+  setTimeout(()=>{
+    overlay.classList.add("portalExit");
+  }, 650);
+
+  setTimeout(()=>{
+    window.location.href = url;
+  }, 1250);
+}
+
   </script>
+  <!-- 8 Months Redirect Overlay -->
+<div class="portalOverlay" id="portalOverlay" aria-hidden="true">
+  <div class="portalRing"></div>
+  <div class="portalBeam"></div>
+  <div class="portalParticles" id="portalParticles"></div>
+
+  <div class="portalCore">
+    <div class="portalTitle">مفاجأة 8 شهور… جاهزة 💗</div>
+    <p class="portalSub">ثواني وندخل على الهدية…</p>
+  </div>
+</div>
 </body>
 </html>
+
 
 
 
